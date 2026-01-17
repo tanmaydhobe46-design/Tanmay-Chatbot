@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { Send, Moon, Sun } from "lucide-react";
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.GEMINI_API_KEY });
 
 export default function TanmayBot() {
   const [messages, setMessages] = useState([
